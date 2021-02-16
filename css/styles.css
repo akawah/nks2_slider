@@ -1,0 +1,96 @@
+.content{
+  max-width: 700px;
+  height: 1200px;
+  margin: 0 auto;
+}
+/***** slider *****/
+.nks2 {
+  position: relative;
+  overflow: hidden;
+}
+.nks2__wrap {
+  display: flex;
+  width: 200%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  animation-name: move-to-left;
+  animation-duration: 0.5s;
+  animation-delay: 3.5s;
+  animation-fill-mode: both;
+  transition: transform 0.5s;
+}
+.nks2__tol{
+  animation-name: move-to-left;
+}
+.nks2__tor{
+  animation-name: move-to-right;
+}
+.nks2__wrap:hover {
+  animation-play-state: paused;
+}
+.nks2__item {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nks2__link{
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+.nks2__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.nks2__lbtn, .nks2__rbtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  top: calc(50% - 25px);
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.nks2__lbtn:hover, .nks2__rbtn:hover {
+  background: rgba(220,220,220,0.5);
+}
+.nks2__lbtn{
+  left: 0;
+}
+.nks2__rbtn {
+  right: 0;
+}
+.nks2__l, .nks2__r {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-top: 3px solid #d80027;
+  border-right: 3px solid #d80027;
+  background: transparent;
+  cursor: pointer;
+}
+.nks2__l{
+  transform: rotate(-135deg);
+  left: 7px;
+}
+.nks2__r {
+  transform: rotate(45deg);
+  right: 7px;
+}
+@keyframes move-to-left {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(-50%);}
+}
+@keyframes move-to-right {
+  0% {transform: translateX(-50%);}
+  100% {transform: translateX(0%);}
+}

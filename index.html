@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nks2_slider - простейший двойной слайдер со стрелками</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="nks2">
+        <ul class="nks2__wrap nks2__tol">
+          <li class="nks2__item">
+            <a href="#" class="nks2__link">
+              <picture>
+                <source srcset="img/vtb.webp" type="image/webp">
+                <img loading="lazy" src="img/vtb.jpg" class="nks2__img">
+              </picture>
+            </a>
+          </li>
+          <li class="nks2__item">
+            <a href="#" class="nks2__link">
+              <picture>
+                <source srcset="img/skb.webp" type="image/webp">
+                <img loading="lazy" src="img/skb.jpg" class="nks2__img">
+              </picture>
+            </a>
+          </li>
+        </ul>
+        <div class="nks2__lbtn" onclick="move()">
+          <button class="nks2__l"></button>
+        </div>
+        <div class="nks2__rbtn" onclick="move()">
+          <button class="nks2__r"></button>
+        </div>
+      </div>
+      <script src="js/nks2.js"></script>
+    </div>
+  </body>
+</html>
